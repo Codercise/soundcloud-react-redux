@@ -4,8 +4,13 @@ function Stream({ tracks = [] }) {
   return (
     <div>
       <div>
-        <button onClick={onAuth} type="button">Login</button>
+        {
+          user ?
+            <div>{user.username}</div> :
+            <button onClick={onAuth} type="button">Login</button>
+        }
       </div>
+      <br/>
       <div>
         {
           tracks.map((track, key) => {
