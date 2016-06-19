@@ -2,8 +2,9 @@ import Stream from './presenter';
 import { shallow } from 'enzyme';
 
 describe('Stream', () => {
+
   const props = {
-    tracks: [{origin: { title: 'x'}}, {origin: { title: 'y' } }],
+    tracks: [{ origin: { title: 'x' } }, { origin: { title: 'y' } }],
   };
 
   it('shows two elements', () => {
@@ -11,4 +12,5 @@ describe('Stream', () => {
 
     expect(element.find('.track')).to.have.length(2);
   });
+
 });
