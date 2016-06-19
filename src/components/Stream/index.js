@@ -16,9 +16,9 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onAuth: bindActionCreators(actions.auth, dispatch),
     onPlay: bindActionCreators(actions.playTrack, dispatch),
+    onAuth: bindActionCreators(actions.auth, dispatch)
   };
 }
 
-export default connect(mapStateToProp, mapDispatchToProps)(Stream);
+export default connect(mapStateToProps, mapDispatchToProps)(Stream);

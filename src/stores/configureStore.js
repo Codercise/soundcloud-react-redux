@@ -5,7 +5,7 @@ import { browserHistory } from 'react-router';
 import { routerMiddleware } from 'react-router-redux';
 import rootReducer from '../reducers/index';
 
-const logger = createlogger();
+const logger = createLogger();
 const router = routerMiddleware(browserHistory);
 
 const createStoreWithMiddleware = applyMiddleware(logger)(createStore);
